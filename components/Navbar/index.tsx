@@ -41,7 +41,7 @@ export const Navbar = () => {
             } lg:flex grid-col-1 lg:backdrop-blur-none border-2 lg:border-0 lg:bg-inherit lg:space-y-0 border-white backdrop-blur-sm bg-black/70 space-y-3 p-3 lg:p-0 rounded-lg lg:flex-row lg:col-span-2 lg:justify-center`}
           >
             {navigation.map((nav) => (
-              <Link href={nav.path_name}>
+              <Link key={nav.text} href={nav.path_name}>
                 <span
                   className={`${
                     router.pathname === nav.path_name
