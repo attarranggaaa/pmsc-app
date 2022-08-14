@@ -15,6 +15,7 @@ import {
 import { NextPage } from "next";
 import { useState } from "react";
 import { formatUnits, parseUnits } from "ethers/lib/utils";
+import Image from "next/image";
 
 const myNftDropContractAddress = "0x19669e577d052e97a33B02409092dF01aC8F02eD";
 
@@ -79,14 +80,15 @@ const Mint: NextPage = () => {
         <div
           className={`flex ${
             address && "flex-col space-y-3"
-          } space-x-0  md:flex-row md:space-x-5 md:space-y-0 backdrop-blur-[2px] bg-white/10 rounded-lg p-5`}
+          } space-x-0  md:flex-row md:space-x-5 md:space-y-0 backdrop-blur-[2px] bg-white/10 rounded-lg p-3 md:p-5`}
         >
           {address ? (
             <>
-              <img src="/nft.gif" className="w-56 h-56 rounded-lg"></img>
-
-              <div className="w-56 flex flex-col justify-between">
-                <div className="rounded-lg p-2 flex justify-between font-medium text-white items-center">
+              <div className="md:w-56 md:h-56 w-44 h-44  relative">
+                <Image src="/nft.gif" alt="nft" layout="fill" className="rounded-lg" />
+              </div>
+              <div className="md:w-56 w-44 flex flex-col justify-between">
+                <div className="rounded-lg md:text-lg text-sm flex justify-between font-medium text-white items-center">
                   <h4>Total Minted</h4>
                   {claimedSupply && unclaimedSupply ? (
                     <p>
@@ -126,7 +128,7 @@ const Mint: NextPage = () => {
                     </div>
                     <button
                       onClick={mint}
-                      className="bg-black duration-100 hover:bg-[#7E24FA] text-white p-2 mt-5 rounded-lg font-base w-full"
+                      className="bg-black duration-100 hover:bg-[#7E24FA] text-white p-2 mt-3 md:mt-5 rounded-lg font-base w-full"
                     >
                       {claimNFT.isLoading
                         ? "Minting..."

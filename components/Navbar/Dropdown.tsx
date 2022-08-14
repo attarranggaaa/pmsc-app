@@ -50,10 +50,9 @@ const Dropdown = () => {
       ) : (
         <Base name="Connect Wallet">
           {wallets.map((wallet: any) => (
-            <Menu.Item>
+            <Menu.Item key={wallet.name}>
               {() => (
                 <button
-                  key={wallet.name}
                   className="duration-100 text-left font-medium text-sm mt-2 hover:bg-white rounded-md py-2 px-6 hover:text-black text-white"
                   onClick={wallet.connect}
                 >

@@ -22,7 +22,7 @@ export const Navbar = () => {
       <div className="absolute w-full z-10">
         <div className="grid grid-cols-4 py-8 container mx-auto px-10">
           <div className="flex items-center col-span-2 lg:col-span-1">
-            <Image src="/logo.png" height="42" width="45"></Image>
+            <Image src="/logo.png" alt="logo" height="42" width="45"></Image>
             <h1 className="font-bold text-white text-xl ml-5">PMSC</h1>
           </div>
           <div
