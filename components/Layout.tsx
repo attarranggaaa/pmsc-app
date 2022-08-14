@@ -18,7 +18,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
         />
       </Head>
 
-      <main className="bg-[url('/background.png')] bg-center min-h-screen">
+      <main className="bg-[url('/background.png')] bg-center max-h-screen h-screen">
         <Navbar />
         <div className="container mx-auto px-10">{children}</div>
         <Footer />
