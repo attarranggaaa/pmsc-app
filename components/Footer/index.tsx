@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SiTwitter, SiInstagram, SiDiscord, SiLinktree } from "react-icons/si";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -15,6 +16,11 @@ export const Footer = () => {
             </Link>
             <Link href="https://linktr.ee/pmscty">
               <SiLinktree className="h-6 w-6 opacity-50 hover:opacity-100 cursor-pointer" />
+            </Link>
+            <Link href="https://opensea.io/collection/polygonmonkeysociety">
+              <div className="w-6 h-6 relative opacity-50 hover:opacity-100 cursor-pointer">
+                <Image src="/opensea.svg" alt="logo" layout="fill" />
+              </div>
             </Link>
           </div>
           <div></div>

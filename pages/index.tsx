@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -16,9 +17,11 @@ const Home: NextPage = () => {
           </p>
         </div>
         <div className="mt-10">
-          <button className="duration-100 shadow-xl hover:shadow-white/20 shadow-[#7E24FA]/20 py-2 w-48 bg-[#7E24FA]  text-white rounded-lg font-semibold hover:bg-white hover:text-black">
-            Mint
-          </button>
+          <Link href="/mint">
+            <h2 className="text-center cursor-pointer duration-100 shadow-xl hover:shadow-white/20 shadow-[#7E24FA]/20 py-2 w-48 bg-[#7E24FA]  text-white rounded-lg font-semibold hover:bg-white hover:text-black">
+              Mint
+            </h2>
+          </Link>
         </div>
       </div>
     </>
